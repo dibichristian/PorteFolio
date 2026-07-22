@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Christian Dibi — Developpeur Python & Odoo | DevOps. Modules ERP, migration de donnees, deploiement Docker/Kubernetes." />
+  <title>Christian Dibi — Developpeur Python & Odoo | DevOps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#accueil" class="nav__logo">CD<span>.</span></a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#apropos">A propos</a>
+        <a href="#competences">Competences</a>
+        <a href="#experience">Experience</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Changer de theme">🌙</button>
+        <button id="burger" class="icon-btn burger" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="accueil">
+    <div class="container hero__inner">
+      <p class="hero__hi">Bonjour, je suis</p>
+      <h1 class="hero__name">Christian Dibi</h1>
+      <h2 class="hero__role">Developpeur Python &amp; Odoo <span>·</span> DevOps</h2>
+      <p class="hero__desc">
+        Plus de 2 ans d'experience dans la conception de modules ERP, la migration
+        de donnees et le deploiement d'applications. Passionne par l'automatisation
+        et les technologies DevOps (Docker, Kubernetes, CI/CD).
+      </p>
+      <div class="hero__cta">
+        <a href="#projets" class="btn btn--primary">Voir mes projets</a>
+        <a href="assets/CV_Christian_Dibi.pdf" class="btn btn--ghost" download>Telecharger le CV</a>
+      </div>
+      <div class="hero__social">
+        <a href="https://github.com/dibichristian" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:dibichristian@outlook.com">Email</a>
+        <a href="tel:+2250778820268">+225 07 78 82 02 68</a>
+      </div>
+    </div>
+    <a href="#apropos" class="hero__scroll" aria-label="Descendre">↓</a>
+  </section>
+
+  <!-- ============ A PROPOS ============ -->
+  <section class="section" id="apropos">
+    <div class="container">
+      <h2 class="section__title"><span>01.</span> A propos</h2>
+      <div class="apropos">
+        <div class="apropos__text">
+          <p>
+            Developpeur Python &amp; Odoo base a Abidjan (Cote d'Ivoire). Je concois
+            et personnalise des modules ERP (Python, XML, QWeb), j'automatise les
+            migrations de donnees et je deploie des applications en environnement
+            conteneurise.
+          </p>
+          <p>
+            J'aime les solutions robustes et pragmatiques : ORM standard, patterns
+            eprouves, pipelines CI/CD propres. Toujours a la recherche du bon
+            equilibre entre fiabilite, performance et lisibilite.
+          </p>
+        </div>
+        <aside class="apropos__facts">
+          <div class="fact"><span>Localisation</span>Yopougon, Abidjan — CI</div>
+          <div class="fact"><span>Formation</span>Licence MIAGE — Univ. Polytechnique de Bingerville</div>
+          <div class="fact"><span>Langues</span>Francais (natif), Anglais (professionnel)</div>
+          <div class="fact"><span>Disponibilite</span>Ouvert aux opportunites</div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPETENCES ============ -->
+  <section class="section section--alt" id="competences">
+    <div class="container">
+      <h2 class="section__title"><span>02.</span> Competences</h2>
+      <div class="skills">
+        <div class="skill-card">
+          <h3>Langages</h3>
+          <ul><li>Python</li><li>PHP</li><li>SQL</li><li>Bash / Shell</li></ul>
+        </div>
+        <div class="skill-card">
+          <h3>Frameworks &amp; ERP</h3>
+          <ul><li>Odoo</li><li>Laravel</li><li>Flask</li><li>FastAPI</li></ul>
+        </div>
+        <div class="skill-card">
+          <h3>DevOps</h3>
+          <ul><li>Docker</li><li>Kubernetes</li><li>GitHub Actions</li><li>GitLab CI/CD</li></ul>
+        </div>
+        <div class="skill-card">
+          <h3>Bases de donnees</h3>
+          <ul><li>PostgreSQL</li><li>MySQL</li><li>SQLite</li></ul>
+        </div>
+        <div class="skill-card">
+          <h3>Modelisation</h3>
+          <ul><li>MERISE</li><li>UML</li></ul>
+        </div>
+        <div class="skill-card">
+          <h3>Outils</h3>
+          <ul><li>Git / GitHub / GitLab</li><li>Linux</li><li>VS Code</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section__title"><span>03.</span> Experience</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">Juin 2024 — Present</div>
+          <div class="tl-body">
+            <h3>Developpeur Python &amp; Odoo <span>· Progistack</span></h3>
+            <ul>
+              <li>Developpement et personnalisation de modules Odoo (Python, XML, QWeb)</li>
+              <li>Analyse, nettoyage et migration de donnees metier vers Odoo via scripts Python</li>
+              <li>Deploiement d'instances Odoo sous environnement Docker</li>
+              <li>Versionnage du code avec Git (GitHub / GitLab)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Aout 2022 — Aout 2023</div>
+          <div class="tl-body">
+            <h3>Stagiaire Ressources Humaines <span>· G4S Cote d'Ivoire</span></h3>
+            <ul>
+              <li>Traitement des courriers disciplinaires et cas de licenciement</li>
+              <li>Emission des attestations de travail et domiciliation de salaire</li>
+              <li>Declarations CNPS du personnel</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Mars 2022 — Aout 2022</div>
+          <div class="tl-body">
+            <h3>Consultant Informatique <span>· INADCI (via ASHER Service)</span></h3>
+            <ul>
+              <li>Maintenance informatique et support technique niveau 1 &amp; 2</li>
+              <li>Formation des utilisateurs sur Microsoft 365 Online</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Aout 2021 — Aout 2022</div>
+          <div class="tl-body">
+            <h3>Assistant Informatique <span>· ASHER Service</span></h3>
+            <ul>
+              <li>Maintenance preventive et corrective du materiel informatique</li>
+              <li>Developpement et gestion de supports d'applications web</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJETS ============ -->
+  <section class="section section--alt" id="projets">
+    <div class="container">
+      <h2 class="section__title"><span>04.</span> Projets</h2>
+      <p class="section__note">
+        Selection de projets representatifs. Remplace les liens et descriptions par
+        tes vrais depots quand ils sont prets.
+      </p>
+      <div class="projects">
+        <article class="project-card">
+          <div class="project-card__top">
+            <span class="folder">📁</span>
+            <a href="https://github.com/dibichristian" target="_blank" rel="noopener" class="project-card__link" aria-label="Code source">↗</a>
+          </div>
+          <h3>Modules Odoo sur mesure</h3>
+          <p>Modules ERP personnalises (ventes, achats, RH) avec vues QWeb, regles
+             de securite et logique metier ORM-first.</p>
+          <ul class="tags"><li>Python</li><li>Odoo</li><li>QWeb</li><li>PostgreSQL</li></ul>
+        </article>
+        <article class="project-card">
+          <div class="project-card__top">
+            <span class="folder">📁</span>
+            <a href="https://github.com/dibichristian" target="_blank" rel="noopener" class="project-card__link" aria-label="Code source">↗</a>
+          </div>
+          <h3>Deploiement Odoo dockerise</h3>
+          <p>Stack Odoo + PostgreSQL conteneurisee, reverse proxy et pipeline CI/CD
+             pour des mises en production reproductibles.</p>
+          <ul class="tags"><li>Docker</li><li>Kubernetes</li><li>GitHub Actions</li></ul>
+        </article>
+        <article class="project-card">
+          <div class="project-card__top">
+            <span class="folder">📁</span>
+            <a href="https://github.com/dibichristian" target="_blank" rel="noopener" class="project-card__link" aria-label="Code source">↗</a>
+          </div>
+          <h3>Scripts de migration de donnees</h3>
+          <p>Outils Python (pandas) pour extraire, nettoyer et importer des donnees
+             metier legacy vers Odoo, avec controles de coherence.</p>
+          <ul class="tags"><li>Python</li><li>pandas</li><li>ETL</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="section__title section__title--center"><span>05.</span> Contact</h2>
+      <p class="contact__lead">
+        Un projet, une opportunite ou juste envie d'echanger ? Ecris-moi.
+      </p>
+      <a href="mailto:dibichristian@outlook.com" class="btn btn--primary btn--lg">Envoyer un email</a>
+      <div class="contact__links">
+        <a href="https://github.com/dibichristian" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:dibichristian@outlook.com">dibichristian@outlook.com</a>
+        <a href="tel:+2250778820268">+225 07 78 82 02 68</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Concu &amp; developpe par Christian Dibi — 2026</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

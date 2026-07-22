@@ -1,0 +1,14 @@
+# OS
+Thumbs.db
+.DS_Store
+
+# Editeurs
+.vscode/
+.idea/
+
+# Fichiers sources CV (ne pas publier les brouillons)
+*.pptx
+*.docx
+
+# Divers
+*.log
