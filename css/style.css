@@ -147,10 +147,7 @@ a:hover { opacity: 0.85; }
 .btn--ghost { background: transparent; border-color: var(--accent); color: var(--accent); }
 .btn--ghost:hover { background: var(--accent-soft); }
 .btn--lg { padding: 15px 34px; font-size: 1.02rem; margin: 8px 0 34px; }
-.hero__cta { align-items: center; }
-.cv-link { color: var(--muted); font-size: 0.9rem; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; border-bottom: 1px dashed transparent; padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
-.cv-link:hover { color: var(--accent); border-color: var(--accent); }
-.cv-link__icon { font-size: 1rem; }
+.btn span { margin-right: 4px; }
 
 /* ============ STATS ============ */
 .stats-band { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--bg-alt); }
@@ -269,6 +266,27 @@ a:hover { opacity: 0.85; }
 .project-card p { font-size: 0.92rem; flex-grow: 1; }
 .tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .tags li { font-family: monospace; font-size: 0.78rem; color: var(--muted); }
+
+/* ============ CV ============ */
+.cv-block { display: flex; flex-direction: column; align-items: center; gap: 26px; }
+.cv-preview { width: 100%; max-width: 640px; margin: 0; }
+.cv-preview__frame {
+  position: relative; border-radius: var(--radius); overflow: hidden;
+  border: 1px solid var(--border); background: var(--card); box-shadow: var(--shadow);
+  height: 70vh; max-height: 780px; min-height: 460px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.cv-preview__frame::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  box-shadow: inset 0 -60px 50px -40px color-mix(in srgb, var(--bg-alt) 90%, transparent);
+}
+.cv-preview__frame:hover { transform: translateY(-4px); box-shadow: 0 26px 55px -22px rgba(0,0,0,0.55); }
+.cv-preview__frame object { width: 100%; height: 100%; border: 0; display: block; }
+.cv-preview__fallback { height: 100%; display: grid; place-content: center; justify-items: center; gap: 10px; text-align: center; padding: 30px; color: var(--muted); }
+.cv-preview__fallback span { font-size: 3rem; }
+.cv-preview__fallback a { font-weight: 600; }
+.cv-preview__cap { text-align: center; color: var(--muted); font-size: 0.82rem; margin-top: 12px; }
+.cv-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 
 /* ============ CONTACT ============ */
 .contact { text-align: center; }
