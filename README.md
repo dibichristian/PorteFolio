@@ -11,7 +11,8 @@ PorteFolio/
 ├── index.html          # Page unique
 ├── css/style.css       # Styles + theme clair/sombre
 ├── js/script.js        # Theme toggle, menu mobile, animations
-├── assets/CV_*.pdf     # CV telechargeable
+├── assets/cv.html      # CV imprimable (export PDF via Ctrl+P)
+├── assets/favicon.svg  # Favicon monogramme
 └── README.md
 ```
 
