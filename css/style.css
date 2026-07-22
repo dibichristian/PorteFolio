@@ -174,13 +174,40 @@ a:hover { opacity: 0.85; }
 .fact span { display: block; color: var(--accent); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 4px; }
 
 /* ============ COMPETENCES ============ */
-.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px; }
-.skill-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; transition: border-color 0.2s, box-shadow 0.25s; }
-.skill-card:hover { border-color: var(--accent); box-shadow: var(--shadow); }
-.skill-card h3 { color: var(--text-strong); font-size: 1.05rem; margin-bottom: 12px; }
-.skill-card ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
-.skill-card li { background: var(--accent-soft); color: var(--accent); padding: 5px 11px; border-radius: 20px; font-size: 0.82rem; font-weight: 500; transition: transform 0.15s; }
-.skill-card li:hover { transform: scale(1.08); }
+.skill-group { margin-bottom: 30px; }
+.skill-group__title { color: var(--text-strong); font-size: 1rem; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.skill-group__title::before { content: '▹'; color: var(--accent); }
+.techs { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 14px; }
+.tech {
+  --c: var(--accent);
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  padding: 20px 12px; border-radius: var(--radius);
+  background: var(--card); border: 1px solid var(--border); color: var(--text-strong);
+  font-size: 0.9rem; font-weight: 600; text-align: center; position: relative; overflow: hidden;
+  transition: transform 0.22s cubic-bezier(0.22,1,0.36,1), border-color 0.22s, box-shadow 0.25s;
+}
+.tech::before {
+  content: ''; position: absolute; inset: 0; opacity: 0; transition: opacity 0.25s;
+  background: radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--c) 20%, transparent), transparent 70%);
+}
+.tech i { font-size: 2.4rem; line-height: 1; transition: transform 0.25s; }
+.tech__emoji { font-size: 2.2rem; line-height: 1; transition: transform 0.25s; }
+.tech span:last-child { position: relative; z-index: 1; }
+.tech:hover {
+  transform: translateY(-6px); border-color: var(--c);
+  box-shadow: 0 14px 30px -14px color-mix(in srgb, var(--c) 60%, transparent);
+  opacity: 1;
+}
+.tech:hover::before { opacity: 1; }
+.tech:hover i, .tech:hover .tech__emoji { transform: scale(1.15) rotate(-4deg); }
+.tech::after {
+  content: 'Voir la doc ↗'; position: absolute; bottom: 8px; left: 0; right: 0;
+  font-size: 0.66rem; font-weight: 500; color: var(--c); opacity: 0; transform: translateY(6px);
+  transition: opacity 0.25s, transform 0.25s;
+}
+.tech:hover::after { opacity: 1; transform: translateY(0); }
+.tech:hover span:last-child { transform: translateY(-8px); }
+.tech span:last-child { transition: transform 0.25s; }
 
 /* ============ TIMELINE ============ */
 .timeline { position: relative; padding-left: 26px; }

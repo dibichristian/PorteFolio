@@ -42,16 +42,14 @@ const revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-r
 if (reduceMotion) {
   revealEls.forEach((el) => el.classList.add('in'));
 } else {
+  // Bidirectionnel : l'animation se rejoue a chaque entree/sortie du viewport
   const io = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          io.unobserve(entry.target);
-        }
+        entry.target.classList.toggle('in', entry.isIntersecting);
       });
     },
-    { threshold: 0.14, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0.14, rootMargin: '0px 0px -60px 0px' }
   );
   revealEls.forEach((el) => io.observe(el));
 }
