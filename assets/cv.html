@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — Christian Dibi</title>
+  <style>
+    :root {
+      --accent: #0d9488;
+      --accent2: #5b6cf0;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --sidebar: #f3f6f9;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #e9edf2; color: var(--ink); font-family: 'Segoe UI', system-ui, Arial, sans-serif; line-height: 1.5; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    /* Bouton flottant (ecran seulement) */
+    .toolbar { position: fixed; top: 18px; right: 18px; z-index: 50; display: flex; gap: 10px; }
+    .toolbar button, .toolbar a {
+      font: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer; text-decoration: none;
+      padding: 10px 16px; border-radius: 8px; border: 0; color: #fff;
+      background: linear-gradient(120deg, var(--accent), var(--accent2)); box-shadow: 0 8px 20px -8px rgba(0,0,0,0.4);
+    }
+    .toolbar a { background: #fff; color: var(--accent); border: 1px solid var(--line); }
+    html.embedded .toolbar { display: none; }
+
+    /* Feuille A4 */
+    .page {
+      width: 210mm; min-height: 297mm; margin: 30px auto; background: #fff;
+      box-shadow: 0 20px 60px -20px rgba(0,0,0,0.35); display: grid; grid-template-columns: 68mm 1fr; overflow: hidden;
+    }
+
+    /* En-tete pleine largeur */
+    .header { grid-column: 1 / -1; padding: 22px 26px; color: #fff; background: linear-gradient(120deg, var(--accent), var(--accent2)); display: flex; align-items: center; gap: 20px; }
+    .avatar { width: 78px; height: 78px; border-radius: 50%; background: rgba(255,255,255,0.18); border: 2px solid rgba(255,255,255,0.6); display: grid; place-items: center; font-size: 1.9rem; font-weight: 800; flex-shrink: 0; }
+    .header h1 { font-size: 1.9rem; font-weight: 800; letter-spacing: -0.5px; line-height: 1.1; }
+    .header .role { font-size: 0.98rem; opacity: 0.95; margin-top: 4px; font-weight: 500; }
+    .header .contact { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.78rem; opacity: 0.95; }
+    .header .contact span { display: inline-flex; align-items: center; gap: 5px; }
+
+    /* Colonnes */
+    .sidebar { background: var(--sidebar); padding: 24px 22px; }
+    .main { padding: 24px 26px; }
+
+    .block { margin-bottom: 22px; }
+    .block:last-child { margin-bottom: 0; }
+    h2 { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-weight: 700; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid var(--accent); }
+
+    .side-item { margin-bottom: 13px; }
+    .side-item h3 { font-size: 0.86rem; font-weight: 700; color: var(--ink); }
+    .side-item .sub { font-size: 0.8rem; color: var(--muted); }
+    .side-item .date { font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
+
+    .taglist { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+    .taglist li { font-size: 0.73rem; background: #fff; border: 1px solid var(--line); color: var(--ink); padding: 3px 9px; border-radius: 12px; }
+
+    .lang { margin-bottom: 10px; }
+    .lang .lbl { display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px; }
+    .lang .lbl b { font-weight: 700; }
+    .lang .lbl span { color: var(--muted); }
+    .bar { height: 6px; border-radius: 4px; background: #e2e8ef; overflow: hidden; }
+    .bar > i { display: block; height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+
+    .profile { font-size: 0.86rem; color: #374151; }
+
+    .exp { position: relative; padding-left: 18px; margin-bottom: 16px; }
+    .exp::before { content: ''; position: absolute; left: 0; top: 5px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+    .exp::after { content: ''; position: absolute; left: 4px; top: 16px; bottom: -12px; width: 1px; background: var(--line); }
+    .exp:last-child::after { display: none; }
+    .exp .top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+    .exp h3 { font-size: 0.9rem; font-weight: 700; }
+    .exp .company { color: var(--accent); font-weight: 600; font-size: 0.82rem; }
+    .exp .date { font-size: 0.72rem; color: var(--muted); white-space: nowrap; }
+    .exp ul { list-style: none; margin-top: 5px; }
+    .exp li { font-size: 0.81rem; color: #374151; padding-left: 12px; position: relative; margin-bottom: 2px; }
+    .exp li::before { content: '–'; position: absolute; left: 0; color: var(--accent); }
+
+    .tech-row { margin-bottom: 8px; font-size: 0.83rem; }
+    .tech-row b { color: var(--ink); font-weight: 700; }
+    .tech-row span { color: #374151; }
+
+    @media print {
+      body { background: #fff; }
+      .toolbar { display: none; }
+      .page { margin: 0; box-shadow: none; width: 100%; min-height: 0; }
+      @page { size: A4; margin: 0; }
+    }
+    @media (max-width: 640px) {
+      .page { grid-template-columns: 1fr; width: 100%; margin: 0; }
+      .toolbar { position: static; padding: 12px; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <script>if (window.self !== window.top) document.documentElement.className += ' embedded';</script>
+  <div class="toolbar">
+    <button onclick="window.print()">⬇ Enregistrer en PDF</button>
+    <a href="../index.html">← Retour au portfolio</a>
+  </div>
+
+  <div class="page">
+    <!-- En-tete -->
+    <header class="header">
+      <div class="avatar">CD</div>
+      <div>
+        <h1>Dibi Atta Joseph Christian Marie</h1>
+        <div class="role">Développeur Python &amp; Odoo · DevOps</div>
+        <div class="contact">
+          <span>📞 +225 07 78 82 02 68</span>
+          <span>✉️ dibichristian@outlook.com</span>
+          <span>📍 Yopougon, Abidjan — Côte d'Ivoire</span>
+          <span>💻 github.com/dibichristian</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Colonne gauche -->
+    <aside class="sidebar">
+      <section class="block">
+        <h2>Formation</h2>
+        <div class="side-item">
+          <h3>Licence MIAGE</h3>
+          <div class="sub">Université Polytechnique de Bingerville</div>
+          <div class="date">2021 – 2022</div>
+        </div>
+        <div class="side-item">
+          <h3>Baccalauréat</h3>
+          <div class="sub">C.S. Méthodiste de Yopougon Kouté</div>
+          <div class="date">2018 – 2019</div>
+        </div>
+      </section>
+
+      <section class="block">
+        <h2>Expertise</h2>
+        <ul class="taglist">
+          <li>Développement Odoo / ERP</li>
+          <li>Python</li>
+          <li>PHP</li>
+          <li>Docker</li>
+          <li>Kubernetes</li>
+          <li>CI/CD</li>
+          <li>Bases de données SQL</li>
+          <li>MERISE / UML</li>
+          <li>Maintenance informatique</li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h2>Langues</h2>
+        <div class="lang">
+          <div class="lbl"><b>Français</b><span>Natif</span></div>
+          <div class="bar"><i style="width:100%"></i></div>
+        </div>
+        <div class="lang">
+          <div class="lbl"><b>Anglais</b><span>Intermédiaire</span></div>
+          <div class="bar"><i style="width:55%"></i></div>
+        </div>
+      </section>
+
+      <section class="block">
+        <h2>Atouts</h2>
+        <ul class="taglist">
+          <li>Rigueur</li>
+          <li>Autonomie</li>
+          <li>Résolution de problèmes</li>
+          <li>Esprit d'équipe</li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Colonne droite -->
+    <main class="main">
+      <section class="block">
+        <h2>Profil</h2>
+        <p class="profile">
+          Développeur Python &amp; Odoo avec plus de 2 ans d'expérience dans la conception
+          de modules ERP, la migration de données et le déploiement d'applications.
+          Passionné par l'automatisation et les technologies DevOps (Docker, Kubernetes,
+          CI/CD), je livre des solutions robustes et adaptées aux besoins métier.
+        </p>
+      </section>
+
+      <section class="block">
+        <h2>Expérience professionnelle</h2>
+
+        <div class="exp">
+          <div class="top">
+            <div><h3>Développeur Python &amp; Odoo</h3><div class="company">Progistack</div></div>
+            <div class="date">Juin 2024 – Présent</div>
+          </div>
+          <ul>
+            <li>Développement et personnalisation de modules Odoo (Python, XML, QWeb)</li>
+            <li>Analyse, nettoyage et migration de données métier vers Odoo via scripts Python</li>
+            <li>Déploiement d'instances Odoo sous environnement Docker</li>
+            <li>Versionnage du code avec Git (GitHub / GitLab)</li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <div class="top">
+            <div><h3>Stagiaire Ressources Humaines</h3><div class="company">G4S Côte d'Ivoire</div></div>
+            <div class="date">Août 2022 – Août 2023</div>
+          </div>
+          <ul>
+            <li>Traitement des courriers disciplinaires et cas de licenciement</li>
+            <li>Émission des attestations de travail et domiciliation de salaire</li>
+            <li>Déclarations CNPS du personnel</li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <div class="top">
+            <div><h3>Consultant Informatique (mission)</h3><div class="company">INADCI — via ASHER Service</div></div>
+            <div class="date">Mars 2022 – Août 2022</div>
+          </div>
+          <ul>
+            <li>Maintenance informatique et support technique niveau 1 &amp; 2</li>
+            <li>Formation des utilisateurs sur Microsoft 365 Online</li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <div class="top">
+            <div><h3>Assistant Informatique</h3><div class="company">ASHER Service</div></div>
+            <div class="date">Août 2021 – Août 2022</div>
+          </div>
+          <ul>
+            <li>Maintenance préventive et corrective du matériel informatique</li>
+            <li>Développement et gestion de supports d'applications web</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="block">
+        <h2>Compétences techniques</h2>
+        <div class="tech-row"><b>Langages :</b> <span>Python · PHP · SQL · Bash/Shell</span></div>
+        <div class="tech-row"><b>Frameworks &amp; ERP :</b> <span>Odoo · Laravel · Flask · FastAPI</span></div>
+        <div class="tech-row"><b>DevOps :</b> <span>Docker · Kubernetes · GitHub Actions · GitLab CI/CD</span></div>
+        <div class="tech-row"><b>Bases de données :</b> <span>PostgreSQL · MySQL · SQLite</span></div>
+        <div class="tech-row"><b>Modélisation :</b> <span>MERISE · UML</span></div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Impression auto si ouvert avec ?print (depuis le portfolio)
+    if (new URLSearchParams(location.search).has('print')) {
+      window.addEventListener('load', () => setTimeout(() => window.print(), 400));
+    }
+  </script>
+</body>
+</html>
