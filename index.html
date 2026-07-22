@@ -5,10 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio de Christian Dibi — Developpeur Python & Odoo | DevOps. Modules ERP, migration de donnees, deploiement Docker/Kubernetes." />
   <title>Christian Dibi — Developpeur Python & Odoo | DevOps</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- Barre de progression scroll -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <!-- Glow qui suit le curseur -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
   <!-- ============ NAV ============ -->
   <header class="nav" id="nav">
     <div class="container nav__inner">
@@ -29,34 +33,54 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="accueil">
+    <div class="hero__bg" aria-hidden="true">
+      <span class="blob blob--1"></span>
+      <span class="blob blob--2"></span>
+      <span class="blob blob--3"></span>
+      <div class="grid-overlay"></div>
+    </div>
     <div class="container hero__inner">
-      <p class="hero__hi">Bonjour, je suis</p>
-      <h1 class="hero__name">Christian Dibi</h1>
-      <h2 class="hero__role">Developpeur Python &amp; Odoo <span>·</span> DevOps</h2>
-      <p class="hero__desc">
+      <p class="hero__hi reveal-up">Bonjour, je suis</p>
+      <h1 class="hero__name reveal-up" data-delay="1">Christian Dibi</h1>
+      <h2 class="hero__role reveal-up" data-delay="2">
+        <span class="typewriter" id="typewriter"></span><span class="caret">|</span>
+      </h2>
+      <p class="hero__desc reveal-up" data-delay="3">
         Plus de 2 ans d'experience dans la conception de modules ERP, la migration
         de donnees et le deploiement d'applications. Passionne par l'automatisation
         et les technologies DevOps (Docker, Kubernetes, CI/CD).
       </p>
-      <div class="hero__cta">
+      <div class="hero__cta reveal-up" data-delay="4">
         <a href="#projets" class="btn btn--primary">Voir mes projets</a>
         <a href="assets/CV_Christian_Dibi.pdf" class="btn btn--ghost" download>Telecharger le CV</a>
       </div>
-      <div class="hero__social">
+      <div class="hero__social reveal-up" data-delay="5">
         <a href="https://github.com/dibichristian" target="_blank" rel="noopener">GitHub</a>
         <a href="mailto:dibichristian@outlook.com">Email</a>
         <a href="tel:+2250778820268">+225 07 78 82 02 68</a>
       </div>
     </div>
-    <a href="#apropos" class="hero__scroll" aria-label="Descendre">↓</a>
+    <a href="#apropos" class="hero__scroll" aria-label="Descendre">
+      <span class="mouse"><span class="wheel"></span></span>
+    </a>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="stats-band">
+    <div class="container stats">
+      <div class="stat reveal-up"><span class="stat__num" data-count="2" data-suffix="+">0</span><span class="stat__label">Annees d'experience</span></div>
+      <div class="stat reveal-up" data-delay="1"><span class="stat__num" data-count="4" data-suffix="">0</span><span class="stat__label">Experiences pro</span></div>
+      <div class="stat reveal-up" data-delay="2"><span class="stat__num" data-count="15" data-suffix="+">0</span><span class="stat__label">Technologies</span></div>
+      <div class="stat reveal-up" data-delay="3"><span class="stat__num" data-count="100" data-suffix="%">0</span><span class="stat__label">Livraisons soignees</span></div>
+    </div>
   </section>
 
   <!-- ============ A PROPOS ============ -->
   <section class="section" id="apropos">
     <div class="container">
-      <h2 class="section__title"><span>01.</span> A propos</h2>
+      <h2 class="section__title reveal-up"><span>01.</span> A propos</h2>
       <div class="apropos">
-        <div class="apropos__text">
+        <div class="apropos__text reveal-left">
           <p>
             Developpeur Python &amp; Odoo base a Abidjan (Cote d'Ivoire). Je concois
             et personnalise des modules ERP (Python, XML, QWeb), j'automatise les
@@ -69,7 +93,7 @@
             equilibre entre fiabilite, performance et lisibilite.
           </p>
         </div>
-        <aside class="apropos__facts">
+        <aside class="apropos__facts reveal-right">
           <div class="fact"><span>Localisation</span>Yopougon, Abidjan — CI</div>
           <div class="fact"><span>Formation</span>Licence MIAGE — Univ. Polytechnique de Bingerville</div>
           <div class="fact"><span>Langues</span>Francais (natif), Anglais (professionnel)</div>
@@ -82,32 +106,14 @@
   <!-- ============ COMPETENCES ============ -->
   <section class="section section--alt" id="competences">
     <div class="container">
-      <h2 class="section__title"><span>02.</span> Competences</h2>
+      <h2 class="section__title reveal-up"><span>02.</span> Competences</h2>
       <div class="skills">
-        <div class="skill-card">
-          <h3>Langages</h3>
-          <ul><li>Python</li><li>PHP</li><li>SQL</li><li>Bash / Shell</li></ul>
-        </div>
-        <div class="skill-card">
-          <h3>Frameworks &amp; ERP</h3>
-          <ul><li>Odoo</li><li>Laravel</li><li>Flask</li><li>FastAPI</li></ul>
-        </div>
-        <div class="skill-card">
-          <h3>DevOps</h3>
-          <ul><li>Docker</li><li>Kubernetes</li><li>GitHub Actions</li><li>GitLab CI/CD</li></ul>
-        </div>
-        <div class="skill-card">
-          <h3>Bases de donnees</h3>
-          <ul><li>PostgreSQL</li><li>MySQL</li><li>SQLite</li></ul>
-        </div>
-        <div class="skill-card">
-          <h3>Modelisation</h3>
-          <ul><li>MERISE</li><li>UML</li></ul>
-        </div>
-        <div class="skill-card">
-          <h3>Outils</h3>
-          <ul><li>Git / GitHub / GitLab</li><li>Linux</li><li>VS Code</li></ul>
-        </div>
+        <div class="skill-card reveal-up tilt"><h3>Langages</h3><ul><li>Python</li><li>PHP</li><li>SQL</li><li>Bash / Shell</li></ul></div>
+        <div class="skill-card reveal-up tilt" data-delay="1"><h3>Frameworks &amp; ERP</h3><ul><li>Odoo</li><li>Laravel</li><li>Flask</li><li>FastAPI</li></ul></div>
+        <div class="skill-card reveal-up tilt" data-delay="2"><h3>DevOps</h3><ul><li>Docker</li><li>Kubernetes</li><li>GitHub Actions</li><li>GitLab CI/CD</li></ul></div>
+        <div class="skill-card reveal-up tilt" data-delay="3"><h3>Bases de donnees</h3><ul><li>PostgreSQL</li><li>MySQL</li><li>SQLite</li></ul></div>
+        <div class="skill-card reveal-up tilt" data-delay="4"><h3>Modelisation</h3><ul><li>MERISE</li><li>UML</li></ul></div>
+        <div class="skill-card reveal-up tilt" data-delay="5"><h3>Outils</h3><ul><li>Git / GitHub / GitLab</li><li>Linux</li><li>VS Code</li></ul></div>
       </div>
     </div>
   </section>
@@ -115,9 +121,9 @@
   <!-- ============ EXPERIENCE ============ -->
   <section class="section" id="experience">
     <div class="container">
-      <h2 class="section__title"><span>03.</span> Experience</h2>
+      <h2 class="section__title reveal-up"><span>03.</span> Experience</h2>
       <div class="timeline">
-        <div class="tl-item">
+        <div class="tl-item reveal-up">
           <div class="tl-date">Juin 2024 — Present</div>
           <div class="tl-body">
             <h3>Developpeur Python &amp; Odoo <span>· Progistack</span></h3>
@@ -129,7 +135,7 @@
             </ul>
           </div>
         </div>
-        <div class="tl-item">
+        <div class="tl-item reveal-up" data-delay="1">
           <div class="tl-date">Aout 2022 — Aout 2023</div>
           <div class="tl-body">
             <h3>Stagiaire Ressources Humaines <span>· G4S Cote d'Ivoire</span></h3>
@@ -140,7 +146,7 @@
             </ul>
           </div>
         </div>
-        <div class="tl-item">
+        <div class="tl-item reveal-up" data-delay="2">
           <div class="tl-date">Mars 2022 — Aout 2022</div>
           <div class="tl-body">
             <h3>Consultant Informatique <span>· INADCI (via ASHER Service)</span></h3>
@@ -150,7 +156,7 @@
             </ul>
           </div>
         </div>
-        <div class="tl-item">
+        <div class="tl-item reveal-up" data-delay="3">
           <div class="tl-date">Aout 2021 — Aout 2022</div>
           <div class="tl-body">
             <h3>Assistant Informatique <span>· ASHER Service</span></h3>
@@ -167,13 +173,14 @@
   <!-- ============ PROJETS ============ -->
   <section class="section section--alt" id="projets">
     <div class="container">
-      <h2 class="section__title"><span>04.</span> Projets</h2>
-      <p class="section__note">
+      <h2 class="section__title reveal-up"><span>04.</span> Projets</h2>
+      <p class="section__note reveal-up">
         Selection de projets representatifs. Remplace les liens et descriptions par
         tes vrais depots quand ils sont prets.
       </p>
       <div class="projects">
-        <article class="project-card">
+        <article class="project-card reveal-up tilt">
+          <div class="project-card__shine"></div>
           <div class="project-card__top">
             <span class="folder">📁</span>
             <a href="https://github.com/dibichristian" target="_blank" rel="noopener" class="project-card__link" aria-label="Code source">↗</a>
@@ -183,7 +190,8 @@
              de securite et logique metier ORM-first.</p>
           <ul class="tags"><li>Python</li><li>Odoo</li><li>QWeb</li><li>PostgreSQL</li></ul>
         </article>
-        <article class="project-card">
+        <article class="project-card reveal-up tilt" data-delay="1">
+          <div class="project-card__shine"></div>
           <div class="project-card__top">
             <span class="folder">📁</span>
             <a href="https://github.com/dibichristian" target="_blank" rel="noopener" class="project-card__link" aria-label="Code source">↗</a>
@@ -193,7 +201,8 @@
              pour des mises en production reproductibles.</p>
           <ul class="tags"><li>Docker</li><li>Kubernetes</li><li>GitHub Actions</li></ul>
         </article>
-        <article class="project-card">
+        <article class="project-card reveal-up tilt" data-delay="2">
+          <div class="project-card__shine"></div>
           <div class="project-card__top">
             <span class="folder">📁</span>
             <a href="https://github.com/dibichristian" target="_blank" rel="noopener" class="project-card__link" aria-label="Code source">↗</a>
@@ -210,12 +219,12 @@
   <!-- ============ CONTACT ============ -->
   <section class="section contact" id="contact">
     <div class="container">
-      <h2 class="section__title section__title--center"><span>05.</span> Contact</h2>
-      <p class="contact__lead">
+      <h2 class="section__title section__title--center reveal-up"><span>05.</span> Contact</h2>
+      <p class="contact__lead reveal-up">
         Un projet, une opportunite ou juste envie d'echanger ? Ecris-moi.
       </p>
-      <a href="mailto:dibichristian@outlook.com" class="btn btn--primary btn--lg">Envoyer un email</a>
-      <div class="contact__links">
+      <a href="mailto:dibichristian@outlook.com" class="btn btn--primary btn--lg reveal-up">Envoyer un email</a>
+      <div class="contact__links reveal-up">
         <a href="https://github.com/dibichristian" target="_blank" rel="noopener">GitHub</a>
         <a href="mailto:dibichristian@outlook.com">dibichristian@outlook.com</a>
         <a href="tel:+2250778820268">+225 07 78 82 02 68</a>
