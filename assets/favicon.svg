@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4fd1c5" />
+      <stop offset="1" stop-color="#7c8cff" />
+    </linearGradient>
+    <radialGradient id="glow" cx="30%" cy="20%" r="75%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.35" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="64" height="64" rx="14" fill="url(#bg)" />
+  <rect x="0" y="0" width="64" height="64" rx="14" fill="url(#glow)" />
+  <text x="32" y="33" fill="#ffffff" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" text-anchor="middle" dominant-baseline="central">CD</text>
+</svg>
