@@ -247,7 +247,9 @@ a:hover { opacity: 0.85; }
 .tl-tags li { background: var(--accent-soft); color: var(--accent); padding: 4px 10px; border-radius: 16px; font-size: 0.76rem; font-weight: 500; }
 
 /* ============ PROJETS ============ */
-.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.projects__group { grid-column: 1 / -1; color: var(--text-strong); font-size: 1rem; font-weight: 600; margin-top: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.projects__group:first-child { margin-top: 0; }
 .project-card { position: relative; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; overflow: hidden; transition: box-shadow 0.25s, border-color 0.2s; transform-style: preserve-3d; }
 .project-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent2)); transform: scaleX(0); transform-origin: left; transition: transform 0.35s; }
 .project-card:hover::before { transform: scaleX(1); }
@@ -267,7 +269,8 @@ a:hover { opacity: 0.85; }
 .tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .tags li { font-family: monospace; font-size: 0.78rem; color: var(--muted); }
 .badge-private { font-size: 0.72rem; font-weight: 600; color: var(--muted); border: 1px solid var(--border); border-radius: 16px; padding: 3px 10px; white-space: nowrap; }
-.project-card--featured { grid-column: 1 / -1; border-color: var(--accent); }
+.project-card--featured, .project-card--wide { grid-column: 1 / -1; }
+.project-card--featured { border-color: var(--accent); }
 .project-card--featured::before { transform: scaleX(1); }
 .project-card--featured h3 { font-size: 1.35rem; }
 .project-card__kicker { color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; }
@@ -324,6 +327,7 @@ a:hover { opacity: 0.85; }
   .apropos { grid-template-columns: 1fr; }
   .services { grid-template-columns: 1fr; }
   .project-parts { grid-template-columns: 1fr; }
+  .projects { grid-template-columns: 1fr; }
   .tl-item { grid-template-columns: 1fr; gap: 6px; }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 28px; }
   .cursor-glow { display: none; }

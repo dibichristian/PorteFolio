@@ -75,7 +75,7 @@
       <div class="stat reveal-up"><span class="stat__num" data-count="2" data-suffix="+">0</span><span class="stat__label">Annees d'experience</span></div>
       <div class="stat reveal-up" data-delay="1"><span class="stat__num" data-count="4" data-suffix="">0</span><span class="stat__label">Experiences pro</span></div>
       <div class="stat reveal-up" data-delay="2"><span class="stat__num" data-count="15" data-suffix="+">0</span><span class="stat__label">Technologies</span></div>
-      <div class="stat reveal-up" data-delay="3"><span class="stat__num" data-count="4" data-suffix="+">0</span><span class="stat__label">Projets realises</span></div>
+      <div class="stat reveal-up" data-delay="3"><span class="stat__num" data-count="6" data-suffix="">0</span><span class="stat__label">Projets realises</span></div>
     </div>
   </section>
 
@@ -249,10 +249,66 @@
     <div class="container">
       <h2 class="section__title reveal-up"><span>04.</span> Projets</h2>
       <p class="section__note reveal-up">
-        Projets personnels et realisations professionnelles. Les depots sont prives :
-        code et demonstration disponibles sur demande.
+        Missions ERP et projets personnels. Clients anonymises et depots prives :
+        details et demonstration disponibles sur demande.
       </p>
       <div class="projects">
+        <h3 class="projects__group reveal-up">Missions Odoo — clients Progistack</h3>
+
+        <article class="project-card reveal-up tilt">
+          <div class="project-card__shine"></div>
+          <div class="project-card__top">
+            <span class="folder">🚚</span>
+            <span class="badge-private" title="Projet client">🔒 Client · Odoo 18</span>
+          </div>
+          <h3>Groupe de transport — Cote d'Ivoire</h3>
+          <p>Module de budgets analytiques et compte de resultat (P&amp;L) : import Excel des
+             budgets, assistant de parametrage, segmentation transport / hors transport.
+             Reprise des a-nouveaux et des immobilisations, rapport de provisions sur achats non factures.</p>
+          <ul class="tags"><li>Python</li><li>Odoo</li><li>Comptabilite analytique</li><li>Excel</li><li>Tests</li></ul>
+        </article>
+
+        <article class="project-card reveal-up tilt" data-delay="1">
+          <div class="project-card__shine"></div>
+          <div class="project-card__top">
+            <span class="folder">🏭</span>
+            <span class="badge-private" title="Projet client">🔒 Client · Odoo 19</span>
+          </div>
+          <h3>Industrie plastique — deux societes</h3>
+          <p>Certification des factures electroniques normalisees (FNE) via l'API de l'administration fiscale,
+             synchronisation intercompagnie (pieces, transferts, ordres de fabrication), paie et RH,
+             validation des ventes avec limite de credit, etats comptables OHADA.</p>
+          <ul class="tags"><li>Python</li><li>Odoo</li><li>API REST</li><li>Comptabilite</li><li>Paie</li></ul>
+        </article>
+
+        <article class="project-card reveal-up tilt" data-delay="2">
+          <div class="project-card__shine"></div>
+          <div class="project-card__top">
+            <span class="folder">⚙️</span>
+            <span class="badge-private" title="Projet client">🔒 Client · Odoo 18</span>
+          </div>
+          <h3>Groupe industriel — Abidjan</h3>
+          <p>Gestion des depenses avec circuit de validation, suivi des decaissements de caisse,
+             immobilisations, deversement comptable par fichier Excel et taches planifiees
+             de detection des ecritures sans piece.</p>
+          <ul class="tags"><li>Python</li><li>Odoo</li><li>Approbations</li><li>Tresorerie</li><li>CRON</li></ul>
+        </article>
+
+        <article class="project-card reveal-up tilt" data-delay="3">
+          <div class="project-card__shine"></div>
+          <div class="project-card__top">
+            <span class="folder">🍾</span>
+            <span class="badge-private" title="Projet client">🔒 Client · En cours</span>
+          </div>
+          <h3>Negoce de boissons sous douane — France</h3>
+          <p>Mise en place d'Odoo pour une filiale europeenne : cadrage du cahier des charges,
+             entrepot sous douane et droits d'accises, collecte et reprise des donnees
+             (comptabilite, achats, ventes, stock).</p>
+          <ul class="tags"><li>Odoo</li><li>Cadrage</li><li>Reprise de donnees</li><li>Stock</li></ul>
+        </article>
+
+        <h3 class="projects__group reveal-up">Projets personnels &amp; freelance</h3>
+
         <article class="project-card project-card--featured reveal-up">
           <div class="project-card__shine"></div>
           <div class="project-card__top">
@@ -276,33 +332,7 @@
           <ul class="tags"><li>Odoo 19</li><li>Laravel</li><li>FastAPI</li><li>PostgreSQL</li><li>Meilisearch</li><li>Docker</li><li>pytest</li></ul>
         </article>
 
-        <article class="project-card reveal-up tilt" data-delay="1">
-          <div class="project-card__shine"></div>
-          <div class="project-card__top">
-            <span class="folder">🔄</span>
-            <span class="badge-private" title="Depot prive">🔒 Prive</span>
-          </div>
-          <h3>Plateforme d'import de donnees Odoo</h3>
-          <p>Application web qui extrait, nettoie et transforme des donnees metier
-             (balances comptables, referentiels, relations) en fichiers d'import Odoo.
-             Gestion des utilisateurs par roles, deploiement conteneurise.</p>
-          <ul class="tags"><li>Flask</li><li>SQLAlchemy</li><li>pandas</li><li>PostgreSQL</li><li>Docker</li><li>GitHub Actions</li></ul>
-        </article>
-
-        <article class="project-card reveal-up tilt" data-delay="2">
-          <div class="project-card__shine"></div>
-          <div class="project-card__top">
-            <span class="folder">🤖</span>
-            <span class="badge-private" title="Depot prive">🔒 Prive</span>
-          </div>
-          <h3>Assistant de reprise de donnees Odoo</h3>
-          <p>Methode de reprise outillee par l'IA (plugin Claude Code) : collecte par perimetre,
-             controles de conformite, extraction depuis Sage, detection d'anomalies et
-             generation des fichiers d'import.</p>
-          <ul class="tags"><li>Python</li><li>Odoo</li><li>Sage</li><li>Claude Code</li></ul>
-        </article>
-
-        <article class="project-card reveal-up tilt" data-delay="3">
+        <article class="project-card project-card--wide reveal-up tilt">
           <div class="project-card__shine"></div>
           <div class="project-card__top">
             <span class="folder">🏛️</span>
