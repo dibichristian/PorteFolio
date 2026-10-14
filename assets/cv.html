@@ -41,11 +41,13 @@
     .header .contact span { display: inline-flex; align-items: center; gap: 5px; }
 
     /* Colonnes */
-    .sidebar { background: var(--sidebar); padding: 24px 22px; }
+    .sidebar { background: var(--sidebar); padding: 24px 22px 12px; }
     .main { padding: 24px 26px; }
 
     .block { margin-bottom: 22px; }
     .block:last-child { margin-bottom: 0; }
+    .sidebar .block { margin-bottom: 16px; }
+    .sidebar .block:last-child { margin-bottom: 0; }
     h2 { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-weight: 700; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid var(--accent); }
 
     .side-item { margin-bottom: 13px; }
@@ -77,7 +79,8 @@
     .exp li { font-size: 0.81rem; color: #374151; padding-left: 12px; position: relative; margin-bottom: 2px; }
     .exp li::before { content: '–'; position: absolute; left: 0; color: var(--accent); }
 
-    .tech-row { margin-bottom: 8px; font-size: 0.83rem; }
+    .tech-row { margin-bottom: 5px; font-size: 0.78rem; }
+    .tech-row b { display: block; }
     .tech-row b { color: var(--ink); font-weight: 700; }
     .tech-row span { color: #374151; }
 
@@ -137,15 +140,21 @@
         <h2>Expertise</h2>
         <ul class="taglist">
           <li>Développement Odoo / ERP</li>
-          <li>Python</li>
-          <li>PHP</li>
-          <li>Docker</li>
-          <li>Kubernetes</li>
+          <li>Comptabilité &amp; finance Odoo</li>
+          <li>Reprise de données</li>
+          <li>Automatisation</li>
           <li>CI/CD</li>
-          <li>Bases de données SQL</li>
-          <li>MERISE / UML</li>
           <li>Maintenance informatique</li>
         </ul>
+      </section>
+
+      <section class="block">
+        <h2>Compétences techniques</h2>
+        <div class="tech-row"><b>Langages :</b> <span>Python · PHP · SQL · Bash/Shell</span></div>
+        <div class="tech-row"><b>Frameworks &amp; ERP :</b> <span>Odoo 18 / 19 · Laravel · Flask · FastAPI</span></div>
+        <div class="tech-row"><b>DevOps :</b> <span>Docker · GitHub Actions · GitLab CI/CD</span></div>
+        <div class="tech-row"><b>Bases de données :</b> <span>PostgreSQL · MySQL · SQLite</span></div>
+        <div class="tech-row"><b>Modélisation :</b> <span>MERISE · UML</span></div>
       </section>
 
       <section class="block">
@@ -177,9 +186,9 @@
         <h2>Profil</h2>
         <p class="profile">
           Développeur Python &amp; Odoo avec plus de 2 ans d'expérience dans la conception
-          de modules ERP, la migration de données et le déploiement d'applications.
-          Passionné par l'automatisation et les technologies DevOps (Docker, Kubernetes,
-          CI/CD), je livre des solutions robustes et adaptées aux besoins métier.
+          de modules ERP (Odoo 18 et 19), la reprise de données et le déploiement d'applications
+          pour des clients de l'industrie, du transport et du négoce. Passionné par l'automatisation
+          (Docker, CI/CD), je livre des solutions robustes et adaptées aux besoins métier.
         </p>
       </section>
 
@@ -192,10 +201,12 @@
             <div class="date">Juin 2024 – Présent</div>
           </div>
           <ul>
-            <li>Développement et personnalisation de modules Odoo (Python, XML, QWeb)</li>
-            <li>Analyse, nettoyage et migration de données métier vers Odoo via scripts Python</li>
-            <li>Déploiement d'instances Odoo sous environnement Docker</li>
-            <li>Versionnage du code avec Git (GitHub / GitLab)</li>
+            <li>Modules Odoo 18 et 19 sur mesure pour 4 clients (Python, XML, QWeb)</li>
+            <li>Facture électronique normalisée (FNE) : certification via l'API fiscale</li>
+            <li>Budgets analytiques et P&amp;L : import Excel, tests automatisés</li>
+            <li>Synchronisation comptable intersociétés (pièces, transferts, fabrication)</li>
+            <li>Reprise de données Excel / Sage en Python (à-nouveaux, immobilisations)</li>
+            <li>Déploiement sous Docker, versionnage Git en flux staging / production</li>
           </ul>
         </div>
 
@@ -205,9 +216,7 @@
             <div class="date">Août 2022 – Août 2023</div>
           </div>
           <ul>
-            <li>Traitement des courriers disciplinaires et cas de licenciement</li>
-            <li>Émission des attestations de travail et domiciliation de salaire</li>
-            <li>Déclarations CNPS du personnel</li>
+            <li>Gestion administrative du personnel : courriers, attestations, déclarations CNPS</li>
           </ul>
         </div>
 
@@ -217,8 +226,7 @@
             <div class="date">Mars 2022 – Août 2022</div>
           </div>
           <ul>
-            <li>Maintenance informatique et support technique niveau 1 &amp; 2</li>
-            <li>Formation des utilisateurs sur Microsoft 365 Online</li>
+            <li>Support technique niveau 1 &amp; 2 et formation des utilisateurs à Microsoft 365</li>
           </ul>
         </div>
 
@@ -228,20 +236,24 @@
             <div class="date">Août 2021 – Août 2022</div>
           </div>
           <ul>
-            <li>Maintenance préventive et corrective du matériel informatique</li>
-            <li>Développement et gestion de supports d'applications web</li>
+            <li>Maintenance du parc informatique et support d'applications web</li>
           </ul>
         </div>
       </section>
 
       <section class="block">
-        <h2>Compétences techniques</h2>
-        <div class="tech-row"><b>Langages :</b> <span>Python · PHP · SQL · Bash/Shell</span></div>
-        <div class="tech-row"><b>Frameworks &amp; ERP :</b> <span>Odoo · Laravel · Flask · FastAPI</span></div>
-        <div class="tech-row"><b>DevOps :</b> <span>Docker · Kubernetes · GitHub Actions · GitLab CI/CD</span></div>
-        <div class="tech-row"><b>Bases de données :</b> <span>PostgreSQL · MySQL · SQLite</span></div>
-        <div class="tech-row"><b>Modélisation :</b> <span>MERISE · UML</span></div>
+        <h2>Projet personnel</h2>
+        <div class="exp">
+          <div class="top">
+            <div><h3>Vitrio — plateforme e-commerce multi-marchands</h3><div class="company">Architecture distribuée en 4 services</div></div>
+          </div>
+          <ul>
+            <li>ERP Odoo 19 (abonnements, facturation), boutiques Laravel isolées par conteneur (450+ tests)</li>
+            <li>Portail de recherche FastAPI + Meilisearch, orchestrateur de déploiement Docker</li>
+          </ul>
+        </div>
       </section>
+
     </main>
   </div>
 
