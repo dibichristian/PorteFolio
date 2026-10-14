@@ -122,7 +122,7 @@ a:hover { opacity: 0.85; }
 @keyframes blink { 50% { opacity: 0; } }
 .hero__desc { max-width: 580px; margin-top: 22px; font-size: 1.05rem; }
 .hero__cta { display: flex; gap: 14px; margin-top: 32px; flex-wrap: wrap; }
-.hero__social { display: flex; gap: 22px; margin-top: 34px; font-size: 0.9rem; }
+.hero__social { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 34px; font-size: 0.9rem; }
 .hero__social a { color: var(--muted); font-weight: 500; }
 .hero__social a:hover { color: var(--accent); }
 .hero__scroll { position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%); z-index: 2; }
