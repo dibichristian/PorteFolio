@@ -7,7 +7,7 @@
   <title>Christian Dibi — Developpeur Python & Odoo | DevOps</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="apple-touch-icon" href="assets/favicon.svg" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -75,7 +75,7 @@
       <div class="stat reveal-up"><span class="stat__num" data-count="2" data-suffix="+">0</span><span class="stat__label">Annees d'experience</span></div>
       <div class="stat reveal-up" data-delay="1"><span class="stat__num" data-count="4" data-suffix="">0</span><span class="stat__label">Experiences pro</span></div>
       <div class="stat reveal-up" data-delay="2"><span class="stat__num" data-count="15" data-suffix="+">0</span><span class="stat__label">Technologies</span></div>
-      <div class="stat reveal-up" data-delay="3"><span class="stat__num" data-count="100" data-suffix="%">0</span><span class="stat__label">Livraisons soignees</span></div>
+      <div class="stat reveal-up" data-delay="3"><span class="stat__num" data-count="4" data-suffix="+">0</span><span class="stat__label">Projets realises</span></div>
     </div>
   </section>
 
@@ -116,7 +116,7 @@
           <div class="fact"><i>📍</i><div><span>Localisation</span>Yopougon, Abidjan — CI</div></div>
           <div class="fact"><i>🎓</i><div><span>Formation</span>Licence MIAGE — Univ. Poly. de Bingerville</div></div>
           <div class="fact"><i>💼</i><div><span>Poste actuel</span>Developpeur Python &amp; Odoo — Progistack</div></div>
-          <div class="fact"><i>🗣️</i><div><span>Langues</span>Francais (natif), Anglais (professionnel)</div></div>
+          <div class="fact"><i>🗣️</i><div><span>Langues</span>Francais (natif), Anglais (intermediaire)</div></div>
           <div class="fact"><i>🟢</i><div><span>Disponibilite</span>Ouvert aux opportunites</div></div>
         </aside>
       </div>
@@ -249,52 +249,77 @@
     <div class="container">
       <h2 class="section__title reveal-up"><span>04.</span> Projets</h2>
       <p class="section__note reveal-up">
-        Selection de projets representatifs. Remplace les liens et descriptions par
-        tes vrais depots quand ils sont prets.
+        Projets personnels et realisations professionnelles. Les depots sont prives :
+        code et demonstration disponibles sur demande.
       </p>
       <div class="projects">
-        <article class="project-card reveal-up tilt">
+        <article class="project-card project-card--featured reveal-up">
           <div class="project-card__shine"></div>
           <div class="project-card__top">
-            <span class="folder">📁</span>
-            <a href="https://github.com/dibichristian" target="_blank" rel="noopener" class="project-card__link" aria-label="Code source">↗</a>
+            <span class="project-card__kicker">Projet phare · Plateforme SaaS</span>
+            <span class="badge-private" title="Depot prive">🔒 Prive</span>
           </div>
-          <h3>Modules Odoo sur mesure</h3>
-          <p>Modules ERP personnalises (ventes, achats, RH) avec vues QWeb, regles
-             de securite et logique metier ORM-first.</p>
-          <ul class="tags"><li>Python</li><li>Odoo</li><li>QWeb</li><li>PostgreSQL</li></ul>
-          <a href="https://github.com/dibichristian" target="_blank" rel="noopener" class="project-card__cta">Voir le code <span>→</span></a>
+          <h3>Vitrio — plateforme e-commerce multi-marchands</h3>
+          <p>
+            Plateforme qui deploie une boutique en ligne isolee par marchand (conteneur,
+            base et sous-domaine dedies), avec un portail de recherche commun et un back-office
+            ERP pour l'abonnement et la facturation. Architecture distribuee en quatre services,
+            pilotee par un cahier des charges, des specifications par service et des decisions
+            d'architecture (ADR) tracees.
+          </p>
+          <ul class="project-parts">
+            <li><strong>ERP Odoo 19</strong>CRM marchands, forfaits, facturation recurrente, machine a etats et regles de suspension</li>
+            <li><strong>Boutiques Laravel 13</strong>Vitrine, tunnel de commande, Mobile Money, back-office — 450+ tests</li>
+            <li><strong>Portail de recherche</strong>Index global des produits, interpretation des requetes par LLM</li>
+            <li><strong>Orchestrateur</strong>Deploiement, suspension, sauvegarde et restauration des instances Docker</li>
+          </ul>
+          <ul class="tags"><li>Odoo 19</li><li>Laravel</li><li>FastAPI</li><li>PostgreSQL</li><li>Meilisearch</li><li>Docker</li><li>pytest</li></ul>
         </article>
+
         <article class="project-card reveal-up tilt" data-delay="1">
           <div class="project-card__shine"></div>
           <div class="project-card__top">
-            <span class="folder">📁</span>
-            <a href="https://github.com/dibichristian" target="_blank" rel="noopener" class="project-card__link" aria-label="Code source">↗</a>
+            <span class="folder">🔄</span>
+            <span class="badge-private" title="Depot prive">🔒 Prive</span>
           </div>
-          <h3>Deploiement Odoo dockerise</h3>
-          <p>Stack Odoo + PostgreSQL conteneurisee, reverse proxy et pipeline CI/CD
-             pour des mises en production reproductibles.</p>
-          <ul class="tags"><li>Docker</li><li>Kubernetes</li><li>GitHub Actions</li></ul>
-          <a href="https://github.com/dibichristian" target="_blank" rel="noopener" class="project-card__cta">Voir le code <span>→</span></a>
+          <h3>Plateforme d'import de donnees Odoo</h3>
+          <p>Application web qui extrait, nettoie et transforme des donnees metier
+             (balances comptables, referentiels, relations) en fichiers d'import Odoo.
+             Gestion des utilisateurs par roles, deploiement conteneurise.</p>
+          <ul class="tags"><li>Flask</li><li>SQLAlchemy</li><li>pandas</li><li>PostgreSQL</li><li>Docker</li><li>GitHub Actions</li></ul>
         </article>
+
         <article class="project-card reveal-up tilt" data-delay="2">
           <div class="project-card__shine"></div>
           <div class="project-card__top">
-            <span class="folder">📁</span>
-            <a href="https://github.com/dibichristian" target="_blank" rel="noopener" class="project-card__link" aria-label="Code source">↗</a>
+            <span class="folder">🤖</span>
+            <span class="badge-private" title="Depot prive">🔒 Prive</span>
           </div>
-          <h3>Scripts de migration de donnees</h3>
-          <p>Outils Python (pandas) pour extraire, nettoyer et importer des donnees
-             metier legacy vers Odoo, avec controles de coherence.</p>
-          <ul class="tags"><li>Python</li><li>pandas</li><li>ETL</li></ul>
-          <a href="https://github.com/dibichristian" target="_blank" rel="noopener" class="project-card__cta">Voir le code <span>→</span></a>
+          <h3>Assistant de reprise de donnees Odoo</h3>
+          <p>Methode de reprise outillee par l'IA (plugin Claude Code) : collecte par perimetre,
+             controles de conformite, extraction depuis Sage, detection d'anomalies et
+             generation des fichiers d'import.</p>
+          <ul class="tags"><li>Python</li><li>Odoo</li><li>Sage</li><li>Claude Code</li></ul>
+        </article>
+
+        <article class="project-card reveal-up tilt" data-delay="3">
+          <div class="project-card__shine"></div>
+          <div class="project-card__top">
+            <span class="folder">🏛️</span>
+            <span class="badge-private" title="Projet client">🔒 Client</span>
+          </div>
+          <h3>Site d'un cabinet d'expertise comptable</h3>
+          <p>Site institutionnel (expertise comptable, audit, conseil, formation) :
+             maquettes front-office et back-office validees par le client, puis
+             developpement sur Laravel.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Laravel</li></ul>
         </article>
       </div>
     </div>
   </section>
 
   <!-- ============ CV ============ -->
-  <section class="section section--alt" id="cv">
+  <section class="section" id="cv">
     <div class="container">
       <h2 class="section__title reveal-up"><span>05.</span> Mon CV</h2>
       <p class="section__note reveal-up">Apercu du document. Telecharge-le ou ouvre-le en plein ecran.</p>
@@ -320,7 +345,7 @@
   </section>
 
   <!-- ============ CONTACT ============ -->
-  <section class="section contact" id="contact">
+  <section class="section section--alt contact" id="contact">
     <div class="container">
       <h2 class="section__title section__title--center reveal-up"><span>06.</span> Contact</h2>
       <p class="contact__badge reveal-up"><span class="dot"></span> Disponible pour de nouvelles opportunites</p>

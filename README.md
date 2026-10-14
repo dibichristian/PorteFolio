@@ -32,5 +32,5 @@ URL : https://dibichristian.github.io/PorteFolio/
 
 ## A completer
 
-- Remplacer les liens des cartes projets par les vrais depots
+- Ajouter les liens des projets si des depots deviennent publics (badge « Prive » sinon)
 - Ajouter une photo dans le hero si souhaite
