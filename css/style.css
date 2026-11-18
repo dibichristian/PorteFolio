@@ -269,6 +269,8 @@ a:hover { opacity: 0.85; }
 .tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .tags li { font-family: monospace; font-size: 0.78rem; color: var(--muted); }
 .badge-private { font-size: 0.72rem; font-weight: 600; color: var(--muted); border: 1px solid var(--border); border-radius: 16px; padding: 3px 10px; white-space: nowrap; }
+.badge-public { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+.badge-public:hover { background: var(--accent); color: var(--bg); }
 .project-card--featured, .project-card--wide { grid-column: 1 / -1; }
 .project-card--featured { border-color: var(--accent); }
 .project-card--featured::before { transform: scaleX(1); }
